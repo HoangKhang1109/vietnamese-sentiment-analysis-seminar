@@ -92,4 +92,4 @@ else:
     st.info("Chưa có dữ liệu lịch sử nào. Hãy thử phân tích một câu ở trên!")
 
 st.markdown("---")
-st.caption("Made with Streamlit • PhoBERT • Deploy miễn phí 24/7")
+
