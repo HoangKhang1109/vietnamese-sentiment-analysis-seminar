@@ -8,7 +8,6 @@ from datetime import datetime
 # ================== CẤU HÌNH TRANG ==================
 st.set_page_config(page_title="Phân loại cảm xúc Tiếng Việt", layout="centered")
 st.title("Phân Loại Cảm Xúc Tiếng Việt")
-st.markdown("**Dùng AI Transformer (PhoBERT) – Chính xác > 92%**")
 
 # ================== INPUT ==================
 text = st.text_area("Nhập câu cần phân tích:", height=120, placeholder="Ví dụ: Hôm nay tôi rất vui!")
@@ -119,3 +118,4 @@ if not df_history.empty:
     st.dataframe(df_display, use_container_width=True, hide_index=True)
 else:
     st.info("Chưa có lịch sử phân tích nào. Hãy thử một câu ở trên nhé!")
+
