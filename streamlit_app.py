@@ -44,7 +44,7 @@ if btn_clear:
         st.warning(" Bạn có chắc chắn muốn xóa toàn bộ lịch sử không? Hành động này không thể hoàn tác!")
         col_confirm, col_cancel = st.columns(2)
         with col_confirm:
-            if st.button("✅ Có, xóa hết!", type="primary", use_container_width=True):
+            if st.button("Có, xóa hết!", type="primary", use_container_width=True):
                 st.session_state.confirm_clear = True
                 st.rerun()
         with col_cancel:
@@ -112,3 +112,4 @@ if not history_df.empty:
     st.dataframe(history_df, use_container_width=True, hide_index=True)
 else:
     st.info(" Chưa có lịch sử phân tích nào. Hãy thử phân tích một câu!")
+
