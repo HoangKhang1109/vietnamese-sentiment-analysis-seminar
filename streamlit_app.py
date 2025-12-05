@@ -37,8 +37,8 @@ if btn_predict and text.strip():
 
     if not clean_text:
         st.toast("Vui lòng nhập nội dung trước khi phân tích!")
-    elif len(clean_text) < 5:
-        st.toast("Câu quá ngắn! Vui lòng nhập ít nhất 5 ký tự")
+    elif (len(clean_text) < 5 or len(clean_text) > 50):
+        st.toast("Câu quá ngắn! Vui lòng nhập vào câu có tối thiểu 5 ký tự và tối đa 50 ký tự!")
     else:
         with st.spinner("Đang phân tích cảm xúc…"):
             try:
@@ -92,4 +92,5 @@ else:
     st.info("Chưa có dữ liệu lịch sử nào. Hãy thử phân tích một câu ở trên!")
 
 st.markdown("---")
+
 
